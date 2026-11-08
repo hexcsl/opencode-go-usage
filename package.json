@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "opencode-go-usage",
+  "version": "0.1.0",
+  "description": "OpenCode Go plan usage limits (5h / weekly / monthly) in the TUI status bar",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tui",
+    "usage",
+    "limits",
+    "go",
+    "go-plus"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./tui": "./src/tui.tsx"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.2.6"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.6.6",
+    "@opentui/solid": ">=0.6.6",
+    "solid-js": ">=1.9.0"
+  },
+  "devDependencies": {
+    "@opentui/core": "^0.8.1",
+    "@opentui/solid": "^0.8.1",
+    "@types/node": ">=20",
+    "solid-js": "^1.9.0",
+    "typescript": ">=5.6"
+  }
+}
