@@ -5,6 +5,15 @@
   "description": "OpenCode Go plan usage limits (5h / weekly / monthly) in the TUI status bar",
   "type": "module",
   "license": "MIT",
+  "author": "hexcsl <35916308+hexcsl@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexcsl/opencode-go-usage.git"
+  },
+  "homepage": "https://github.com/hexcsl/opencode-go-usage#readme",
+  "bugs": {
+    "url": "https://github.com/hexcsl/opencode-go-usage/issues"
+  },
   "keywords": [
     "opencode",
     "opencode-plugin",

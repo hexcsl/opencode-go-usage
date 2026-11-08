@@ -1,6 +1,10 @@
 # opencode-go-usage
 
+[![GitHub](https://img.shields.io/badge/GitHub-hexcsl%2Fopencode--go--usage-181717?logo=github)](https://github.com/hexcsl/opencode-go-usage)
+
 Show your **OpenCode Go** usage limits (5-hour, weekly, monthly) right in the OpenCode TUI status bar.
+
+Repository: <https://github.com/hexcsl/opencode-go-usage>
 
 - Live percentages for the **5-hour**, **weekly** and **monthly** windows
 - Time until each limit resets (`↺4h12m`)
@@ -28,7 +32,7 @@ credentials or configuration are required.
 ### Option 1 — clone into the global plugins directory (recommended)
 
 ```sh
-git clone https://github.com/<your-username>/opencode-go-usage.git \
+git clone https://github.com/hexcsl/opencode-go-usage.git \
   ~/.config/opencode/plugins/opencode-go-usage
 ```
 
@@ -63,20 +67,23 @@ Clone the repository anywhere, then add it to `~/.config/opencode/cli.json`:
 
 Use an absolute path. OpenCode reloads `cli.json` automatically.
 
-### Option 3 — npm (after publishing)
+### Option 3 — Git plugin spec
 
-Publish the package (see [Publishing](#publishing)), then add it by name:
+If your OpenCode version supports Git plugin specs, install straight from GitHub:
+
+```sh
+opencode plugin add github:hexcsl/opencode-go-usage
+```
+
+### Option 4 — npm (after publishing)
+
+The package is not published to npm yet. After you publish it (see
+[Publishing](#publishing)), add it by name:
 
 ```json
 {
   "plugins": ["opencode-go-usage"]
 }
-```
-
-Alternatively, if your OpenCode version supports Git plugin specs:
-
-```sh
-opencode plugin add github:<your-username>/opencode-go-usage
 ```
 
 The package also ships a no-op server part, so it can be added to `opencode.json` as well.
@@ -144,6 +151,8 @@ on startup, after each completed agent turn, and every `refresh` seconds.
 ## Development
 
 ```sh
+git clone https://github.com/hexcsl/opencode-go-usage.git
+cd opencode-go-usage
 npm install
 npm run typecheck
 ```
@@ -153,10 +162,14 @@ To test locally, clone the folder into `~/.config/opencode/plugins/` or point
 
 ## Publishing
 
-1. Replace `<your-username>` in this README with your GitHub username.
-2. Update `name`, `version`, and optionally add a `repository` field in `package.json`.
-3. Optionally test the package with `npm pack` and `npm publish`.
-4. Push the repository to GitHub.
+The source lives at <https://github.com/hexcsl/opencode-go-usage>. To publish the
+package to npm:
+
+1. Update `version` in `package.json`.
+2. Optionally test the package with `npm pack`.
+3. Run `npm publish`.
+
+Then users can install it by name (see [Option 4](#option-4--npm-after-publishing)).
 
 ## License
 
